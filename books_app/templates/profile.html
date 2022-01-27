@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<p>
+Welcome to {{ username }}'s profile.
+</p>
+
+<p>
+    {{ username }}'s favorite books are:
+
+    {% if favorite_books %}
+    <ul>
+        {% for book in favorite_books %}
+        <li>{{ book }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+</p>
+
+{% endblock %}
